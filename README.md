@@ -4,7 +4,7 @@ A string function dynamic linking library that borrows from Python's method
 ## Introduction
 Py_string is a String handling function written in C based on the ways strings are handled in python and made into a dynamic linking library.You can implement some python functions in C.
 The functions are as follows：
-| _name_             |_description_                                                         |
+| __name__             |__description__                                                         |
 |------------      |-------------------                                                |
 |capitalize()      |capitalize the first character of the string                        |
 |center(width)     |returns a new string centered on the original string and filled with spaces to the length width| .
@@ -35,13 +35,13 @@ The dynamic library is independent of the executable program and can be accessed
 
 ----
 ## Usage
-compile:`gcc main.c -L. -ltest -o test`
-run: `$./test`
-If you cannot find the dynamic library, you should pay attention to setting the LD_LIBRARY_PATH environment variable before executing the implicitly linked program, or copy the libtest.so generated earlier to the system path.
-    $./test
-    ./test: error while loading shared libraries: libtest.so: cannot open shared object file: No such file or directory
-    $export LD_LIBRARY_PATH=.
-
+- compile:`gcc main.c -L. -ltest -o test`
+- run: `$./test`
+- If you cannot find the dynamic library, you should pay attention to setting the LD_LIBRARY_PATH environment variable before executing the implicitly linked program, or copy the libtest.so generated earlier to the system path.
+	$./test
+	./test: error while loading shared libraries: libtest.so: cannot open shared object file: No such file or directory
+	$export LD_LIBRARY_PATH=.
+	
 ----
 ## Achievement
 - The introduction to python string function set: < https://www.runoob.com/python/python-strings.html>

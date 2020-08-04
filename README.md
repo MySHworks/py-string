@@ -35,12 +35,13 @@ The dynamic library is independent of the executable program and can be accessed
 
 ----
 ## Usage
-- compile:`gcc main.c -L. -ltest -o test`
-- run: `$./test`
+- compile: `gcc main.c -L. -ltest -o test`
+- run:  `$./test`
 - If you cannot find the dynamic library, you should pay attention to setting the LD_LIBRARY_PATH environment variable before executing the implicitly linked program, or copy the libtest.so generated earlier to the system path.
-	$./test
-	./test: error while loading shared libraries: libtest.so: cannot open shared object file: No such file or directory
-	$export LD_LIBRARY_PATH=.
+
+       $./test
+       ./test: error while loading shared libraries: libtest.so: cannot open shared object file: No such file or directory
+       $export LD_LIBRARY_PATH=.
 	
 ----
 ## Achievement
